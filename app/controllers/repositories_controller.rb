@@ -5,7 +5,7 @@ class RepositoriesController < ApplicationController
       request.body = { 'oauth_token': session[:token] }
       request.headers['Authorization'] = "token #{session[:token]}"
     end
-    binding.pry
+    # binding.pry
     @login = JSON.parse(response.body)["login"]
 
     resp = Faraday.get("https://api.github.com/user/repos") do |req|
