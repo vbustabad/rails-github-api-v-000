@@ -12,7 +12,7 @@ class RepositoriesController < ApplicationController
       req.headers['Authorization'] = "token #{session[:token]}"
     end
     binding.pry
-    @repositories = JSON.parse(resp.body)["repo_url"]
+    @repositories = JSON.parse(resp.body)
   end
 
   # def create
