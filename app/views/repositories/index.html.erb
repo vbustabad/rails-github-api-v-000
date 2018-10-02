@@ -3,7 +3,7 @@
   <% if @repositories.size > 0 %>
     <ul>
       <% @repositories.each do |repository| %>
-        <li><%= "Repo #{repository['id']}" %></li>
+        <li><%= "Repo #{repository['number']}" %></li>
       <% end %>
     </ul>
   <% else %>
