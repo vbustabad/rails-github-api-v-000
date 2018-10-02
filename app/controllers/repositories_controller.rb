@@ -11,7 +11,6 @@ class RepositoriesController < ApplicationController
       req.body = { 'oauth_token': session[:token] }
       req.headers['Authorization'] = "token #{session[:token]}"
     end
-    # binding.pry
     @repositories = JSON.parse(resp.body)
   end
 
